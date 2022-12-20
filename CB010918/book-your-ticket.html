@@ -1,0 +1,139 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>book your ticket</title>
+    <link rel="stylesheet" type="text/css" href="./css/bookstyle.css" />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png" />
+  </head>
+
+  <body>
+    <div id="reg">
+      <h1 id="train_name">Book Your Ticket</h1>
+    </div>
+    <br />
+    <fieldset id="TicketForm">
+      <form id="Ticket">
+        <p>
+          <label for="ticketChoice">Choice of Ticket</label>
+          <select
+            name="ticketChoice"
+            id="ticketChoice"
+            style="width: 155px; height: 30px"
+          >
+            <option value="local_pass" id="L-pass">Local Pass</option>
+            <option value="foreign_pass" id="F-pass">Foreign Pass</option>
+          </select>
+        </p>
+        <br />
+        <fieldset>
+          <legend>No. of Tickets</legend>
+          <div id="numOfTickets">
+            <label for="adultTicket">(Adult)</label>
+            <input
+              type="number"
+              id="adultTicket"
+              name="adultTicket"
+              style="width: 120px; height: 25px"
+              min="0"
+              max="200"
+              value="0"
+            /><br /><br />
+            <label for="childTicket">(Child - Below 15 Yrs)</label>
+            <input
+              type="number"
+              id="childTicket"
+              name="childTicket"
+              style="width: 120px; height: 25px"
+              min="0"
+              max="200"
+              value="0"
+            /><br /><br />
+            <label for="childTicket2">(Child - Below 6 Yrs)</label>
+            <input
+              type="number"
+              id="childTicket2"
+              name="childTicket2"
+              style="width: 120px; height: 25px"
+              min="0"
+              max="200"
+              value="0"
+            />
+          </div>
+        </fieldset>
+        <br />
+        <fieldset>
+          <div id="duration">
+            <label for="timed"> Duration :</label>
+
+            <input
+              type="radio"
+              name="timed"
+              id="3hours"
+              value="3hours"
+              checked
+            />
+            Three Hours
+
+            <input type="radio" name="timed" value="halfday" id="halfday" />
+            Half Day
+
+            <input type="radio" name="timed" value="fullday" id="fullday" />
+            Full Day
+
+            <input type="radio" name="timed" value="2days" id="2days" />
+            2 Days
+          </div>
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend>Extras</legend>
+          <div>
+            <label for="annualpass"> Annual Pass</label>
+            <input
+              type="number"
+              id="annualpass"
+              name="annualpass"
+              style="width: 120px; height: 25px"
+              min="0"
+              max="200"
+              value="0"
+            />
+            <br /><br />
+            <label for="token"> Food Token</label>
+            <input
+              type="number"
+              id="token"
+              name="token"
+              style="width: 120px; height: 25px"
+              min="0"
+              max="200"
+              value="0"
+            />
+          </div>
+        </fieldset>
+        <br />
+        <button type="submit" id="addOrder">Add to Order</button>
+        <button type="submit" id="placeOrder">Place Order</button>
+      </form>
+    </fieldset>
+    <br />
+    <fieldset id="Tbill">
+      <form id="bill">
+        <h3>Total Bill</h3>
+        <hr />
+        <hr />
+        <p>Current Orders: <span id="p1"> 0 </span></p>
+
+        <p>Overall Orders: <span id="p2">0</span></p>
+
+        <p>Cost Of Current Orders: <span id="p3">0</span> LKR</p>
+
+        <p>Overall Cost: <span id="p4">0</span> LKR</p>
+        <hr />
+      </form>
+    </fieldset>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
